@@ -5,6 +5,20 @@ app.use(cors());
 app.use(expr.urlencoded({extended:true}))
 app.use(expr.json())
 
+//
+
+app.use(expr.static('moneymanager-app/build'));
+
+const path = require('path');
+
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'moneymanager-app', 'build', 'index.html'));
+    });
+
+const PORT = process.env.PORT || 7081;
+    
+//
+
 var {MongoClient,ObjectId} =require("mongodb")
 var url ="mongodb+srv://prasath_rvg:zbM5qJZEqtwZMRJn@cluster0.qjrvt.mongodb.net/delta?retryWrites=true&w=majority";
 const client = new MongoClient(url);
@@ -323,4 +337,4 @@ app.put("/update_budget",function(req,res){
 })
 
 
-app.listen(7081,()=>{console.log("the port is running on 7081")})
+app.listen(PORT,()=>{console.log("the port is running on 7081")})
