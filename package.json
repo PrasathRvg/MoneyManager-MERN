@@ -34,8 +34,7 @@
     "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "cd client && yarn && yarn run build"
+    "eject": "react-scripts eject"
   },
   
   "eslintConfig": {
@@ -56,5 +55,5 @@
       "last 1 safari version"
     ]
   }
-"proxy": "http://localhost:7081",
+"proxy": "http://localhost:7081"
 }
