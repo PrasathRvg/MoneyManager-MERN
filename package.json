@@ -2,7 +2,6 @@
   "name": "moneymanager-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://money-manager-beta.herokuapp.com/",
   "engines": {
     "node": "14.17.1",
     "npm": "7.22.0"
@@ -37,6 +36,8 @@
     "eject": "react-scripts eject",
     "heroku-postbuild": "cd client && yarn && yarn run build"
   },
+  "proxy": "http://localhost:7081",
+
   
   "eslintConfig": {
     "extends": [
@@ -56,5 +57,4 @@
       "last 1 safari version"
     ]
   }
-"proxy": "http://localhost:7081"
 }
